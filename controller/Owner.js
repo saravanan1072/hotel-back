@@ -26,7 +26,7 @@ if(fetchuser===data.email){
                })
                const result= await signDocument.save()
                console.log(result);
-               res.send({msg:"user login sucessfull"})
+               res.send({msg:"Owner login sucessfull"})
               
         } 
     
@@ -56,7 +56,7 @@ const loginController=async(req,res)=>{
     })
     if (email === fetchuser) {
         if (await bcrypt.compare(password, fetchpassword)) {
-            res.send({ msg: "User login sucessfull",name:fetchname,result:true })
+            res.send({ msg: "Owner login sucessfull",name:fetchname,result:true })
         }
         else res.send({msg:"username or password is not correct"})   
     }
